@@ -5,4 +5,5 @@
 body {
     background-color: #f0f9ff;
     height: 100vh;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
