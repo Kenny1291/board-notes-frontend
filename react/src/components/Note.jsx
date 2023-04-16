@@ -3,7 +3,7 @@ import axiosClient from "../axios"
 import { debounce, entries } from "lodash"
 import Draggable from 'react-draggable'
 
-export default function Note({note, onContentChange, onNoteDelete}) {
+export default function Note({note, onContentChange, onNoteDelete, setZIndex}) {
 
     const textareaRef = useRef(null)
 
@@ -41,6 +41,7 @@ export default function Note({note, onContentChange, onNoteDelete}) {
 
     const handleDoubleClick = (e) => {
         e.stopPropagation()
+        setZIndex(note.id)
     }
 
     const deleteNote = () => {
@@ -55,7 +56,7 @@ export default function Note({note, onContentChange, onNoteDelete}) {
             defaultPosition={{x: note.x_coordinate, y: note.y_coordinate}}
             bounds= "body"
         >
-            <div className="w-fit h-fit mt-5" onDoubleClick={handleDoubleClick}>
+            <div className="w-fit h-fit mt-5 absolute" style={{zIndex: note.z_index}} onDoubleClick={handleDoubleClick}>
                 <div className="flex backdrop-blur-sm mx-4">
                     <div className="basis-1/3"></div>
                     <div className="handle hover:cursor-grab active:cursor-grabbing basis-1/3 text-center"><span className="material-icons-round">drag_handle</span></div>

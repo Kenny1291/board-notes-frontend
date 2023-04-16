@@ -54,6 +54,20 @@ function App() {
     setNotes(oldNotes => oldNotes.filter(oldNote => oldNote.id !== noteId))
   }
 
+  const findHighestZIndex = () => [...document.querySelectorAll('*')]
+  .reduce((highest, el) => {
+    const zindex = Number(getComputedStyle(el).getPropertyValue('z-index'));
+    return zindex > highest ? zindex : highest;
+  }, 0);
+
+  const setZIndex = (noteId) => {
+    const highestZIndex = findHighestZIndex() + 1
+    setNotes(oldNotes => oldNotes.map(note => note.id === noteId
+        ? {...note, z_index: highestZIndex}
+        : note))
+    axiosClient.put(`/notes/${noteId}`, {z_index: highestZIndex})
+  }
+
   return (
     <>
     <p className='text-center select-none'>Double click to create a note. Notes are saved based on IP address.</p>
@@ -63,6 +77,7 @@ function App() {
                             onContentChange={handleContentChange} 
                             fetchNotes={fetchNotes} 
                             onNoteDelete={handleNoteDelete} 
+                            setZIndex={setZIndex}
                           />)}
     </>
   )
