@@ -70,7 +70,7 @@ function App() {
 
   return (
     <>
-    <p className='text-center select-none'>Double click to create a note. Notes are saved based on IP address.</p>
+    <p className='text-center select-none'>Double click on board to create a note. | Double click on a note to bring it on top. | Notes are saved based on IP address.</p>
     {notes.map((note) => <Note 
                             note={note} 
                             key={note.id} 
