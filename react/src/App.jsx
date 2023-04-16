@@ -42,7 +42,7 @@ function App() {
 
   useEffect(() => {
     const handleDoubleClick = (e) => {
-      createNewNote(e.pageX, e.pageY)
+      createNewNote(e.pageX - 276/2, e.pageY - 256/2)
     }
     document.body.addEventListener('dblclick', handleDoubleClick)
     return () => {
