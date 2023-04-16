@@ -56,7 +56,7 @@ export default function Note({note, onContentChange, onNoteDelete}) {
             bounds= "body"
         >
             <div className="w-fit h-fit mt-5" onDoubleClick={handleDoubleClick}>
-                <div className="flex backdrop-blur-sm">
+                <div className="flex backdrop-blur-sm mx-4">
                     <div className="basis-1/3"></div>
                     <div className="handle hover:cursor-grab active:cursor-grabbing basis-1/3 text-center"><span className="material-icons-round">drag_handle</span></div>
                     <div className="basis-1/3 text-center"><span className="material-icons-round cursor-pointer" onClick={deleteNote}>delete_forever</span></div>
