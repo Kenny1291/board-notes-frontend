@@ -3,7 +3,7 @@ import axiosClient from "../axios"
 import { debounce, entries } from "lodash"
 import Draggable from 'react-draggable'
 
-export default function Note({note, onContentChange, fetchNotes}) {
+export default function Note({note, onContentChange, onNoteDelete}) {
 
     const textareaRef = useRef(null)
 
@@ -44,8 +44,7 @@ export default function Note({note, onContentChange, fetchNotes}) {
     }
 
     const deleteNote = () => {
-        setNotes(oldNotes => oldNotes.filter(oldNote => oldNote.id !== note.id))
-
+        onNoteDelete(note.id)
         axiosClient.delete(`/notes/${note.id}`)
     }
       

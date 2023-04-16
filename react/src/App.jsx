@@ -50,10 +50,20 @@ function App() {
     }
   }, [])
 
+  const handleNoteDelete = (noteId) => {
+    setNotes(oldNotes => oldNotes.filter(oldNote => oldNote.id !== noteId))
+  }
+
   return (
     <>
     <p className='text-center select-none'>Double click to create a note. Notes are saved based on IP address.</p>
-    {notes.map((note) => <Note note={note} key={note.id} onContentChange={handleContentChange} fetchNotes={fetchNotes} />)}
+    {notes.map((note) => <Note 
+                            note={note} 
+                            key={note.id} 
+                            onContentChange={handleContentChange} 
+                            fetchNotes={fetchNotes} 
+                            onNoteDelete={handleNoteDelete} 
+                          />)}
     </>
   )
 }
