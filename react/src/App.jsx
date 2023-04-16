@@ -24,8 +24,22 @@ function App() {
   }
 
   const createNewNote = (x, y) => {
+    const tempId = `temp-${Date.now()}`
+    console.log(tempId);
+    const tempNote = {
+      id: tempId,
+      x_coordinate: x,
+      y_coordinate: y,
+    }
+    setNotes(oldNotes => [...oldNotes, tempNote])
+
     axiosClient.post('/notes', {x_coordinate: x, y_coordinate: y})
-      .then(fetchNotes)
+      .then(response => {
+        console.log(response.data);
+        setNotes(oldNotes => oldNotes.map(note => note.id === tempId 
+          ? response.data 
+          : note))
+      })
   }
 
   useEffect(() => {
