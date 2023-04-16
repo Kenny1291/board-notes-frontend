@@ -44,8 +44,9 @@ export default function Note({note, onContentChange, fetchNotes}) {
     }
 
     const deleteNote = () => {
+        setNotes(oldNotes => oldNotes.filter(oldNote => oldNote.id !== note.id))
+
         axiosClient.delete(`/notes/${note.id}`)
-            .then(fetchNotes)
     }
       
     return (
