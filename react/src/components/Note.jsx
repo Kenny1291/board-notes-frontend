@@ -53,6 +53,7 @@ export default function Note({note, onContentChange, onNoteDelete}) {
             handle=".handle"
             onStop={savePosition}
             defaultPosition={{x: note.x_coordinate, y: note.y_coordinate}}
+            bounds= "body"
         >
             <div className="w-fit h-fit mt-4" onDoubleClick={handleDoubleClick}>
                 <div className="flex">
