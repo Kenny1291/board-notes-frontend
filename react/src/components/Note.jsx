@@ -62,7 +62,7 @@ export default function Note({note, onContentChange, onNoteDelete, setZIndex}) {
                     <div className="handle hover:cursor-grab active:cursor-grabbing basis-1/3 text-center"><span className="material-icons-round">drag_handle</span></div>
                     <div className="basis-1/3 text-center"><span className="material-icons-round cursor-pointer" onClick={deleteNote}>delete_forever</span></div>
                 </div>
-                <textarea className="bg-yellow-note mx-4 mb-4 p-5 min-h-[13rem] shadow-xl resize" type="text" value={note.content} onChange={updateContent} ref={textareaRef} />
+                <textarea className="bg-yellow-note mx-4 mb-4 p-5 min-h-[13rem] shadow-xl resize" type="text" maxlength="2000" value={note.content} onChange={updateContent} ref={textareaRef} />
             </div>
         </Draggable>
     )
