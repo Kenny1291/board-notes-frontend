@@ -1,4 +1,4 @@
-## 📝 Board Notes Frontend
+## 📝 [Board Notes](https://board-notes.vercel.app) Frontend
 Backend: https://github.com/Kenny1291/board-notes-backend
 
 A simple web app to take down notes on a board and organize them how you want.
