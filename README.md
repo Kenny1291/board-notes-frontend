@@ -1,5 +1,5 @@
 ## 📝 [Board Notes](https://board-notes.vercel.app) Frontend
-Backend: https://github.com/Kenny1291/board-notes-backend
+> *Backend: https://github.com/Kenny1291/board-notes-backend*
 
 A simple web app to take down notes on a board and organize them how you want.
 
@@ -8,7 +8,7 @@ A simple web app to take down notes on a board and organize them how you want.
 - Move notes
 - Resize notes
 - Double click on a note to bring it on top
-- Everything is persisted to a database
+- Everything is persisted to a databasea
 - Notes are fetched based on ip address
 
 ## ⚡Technologies Used
