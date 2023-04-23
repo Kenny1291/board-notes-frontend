@@ -8,14 +8,14 @@ A simple web app to take down notes on a board and organize them how you want.
 - Move notes
 - Resize notes
 - Double click on a note to bring it on top
-- Everything is persisted to a databasea
+- Everything is persisted to a database
 - Notes are fetched based on ip address
 
 ## ⚡Technologies Used
 - React (JavaScript)
 - Laravel (PHP) 
 - HTML
-- CSS
+- Tailwind CSS
 - MySQL
 
 ## 🏗️ Deployment
