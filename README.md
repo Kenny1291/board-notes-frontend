@@ -3,6 +3,8 @@
 
 A simple web app to take down notes on a board and organize them how you want.
 
+![](https://github.com/Kenny1291/readme-assets/blob/main/board-notes/board_notes_showcase.gif)
+
 ## 📚 Features
 - Double click to create note
 - Move notes
