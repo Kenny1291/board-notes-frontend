@@ -21,6 +21,6 @@ A simple web app to take down notes on a board and organize them how you want.
 - MySQL
 
 ## 🏗️ Deployment
-- React app: serverless on Vercel (EU)
-- Laravel app: serverless on Vercel (EU)
-- MySQL database: serverless on PlanetScale (EU)
+- React app: Serverless Function on Vercel (EU)
+- Laravel app: Serverless Function on Vercel (EU)
+- MySQL database: Serverless on PlanetScale (EU)
